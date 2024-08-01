@@ -1,0 +1,36 @@
+module checksum (
+  input                 clock,
+  input                 reset,
+  input        [64-1:0] flit ,
+  input                 start,
+  output logic [ 8-1:0] crc  ,
+  output logic          pass
+);
+
+`pragma protect begin_protected
+`pragma protect version = 1
+`pragma protect encrypt_agent = "ModelSim" , encrypt_agent_info = "2020.1"
+`pragma protect key_keyowner = "Mentor Graphics Corporation" , key_keyname = "MGC-VERIF-SIM-RSA-2"
+`pragma protect key_method = "rsa"
+`pragma protect encoding = ( enctype = "base64" , line_length = 64 , bytes = 256 )
+`pragma protect key_block
+TJhf0WBiuUDkp8YzPI7DkC/xecIUuBsojJbDcE1pCu0Rk4GLItehhO6qYEflwnUj
+fEmo6GYl8QWvpwDH4h1cxZj4HNVnoynlIv+/plkK5+4UlKacC+ezApZl4KLPFybl
+rR19DQ9VynBFzUZKNsHJ+g7R4salPeiAnyxg5RxQimyOlVWvZmVtMOBr1AJkbtb4
+pqQT2PO0c9kL/zV7QwSySu/gOBk6iejlQBFLnC2SxHeHGjw/WzGZd9qESsQ4LJ0j
+aEKQXPi/hLNsDkPsGERq+p2GprXCoR2pdK5R6c2eeBZmogZqMyPQnSVvFviZ0z7E
+W/EJ/8sIiLhMf9N+EBFl5w==
+`pragma protect data_method = "aes128-cbc"
+`pragma protect encoding = ( enctype = "base64" , line_length = 64 , bytes = 368 )
+`pragma protect data_block
+KxKTpJA932gmKC4JSJXV0tJpVi1V7P/8Qy7DT86FtJujiEcZ3YUofO5iu/qRv1To
+0h23FlgJERuirl7rLkfYY5wEchDTtNbvKpzGzPr6wLP+zgd+cWipNRv0QGZumGRS
+9QG5IChnEEbeCKvSnqufZbT5jXz17zqrLDVMfaw3hlcOxyyL4PuSMxfKep3YJ9Ml
+pMYirygctGjkH6oTJISXasYcqWq56guOdpPWBX15WbSFBiPbn0YcV3BTbepuNmD8
+O+D3TIavkBQslc06hTjEFKil2Zah9lMURwUv1AK4BIAIS0Csdw8nwtmt+k6sTrO4
+xqRV3RmKY/48PODE0B2LwGN9piSOdVyFp+wKcvIj944wQdTZnPEbidl0PY82soNn
+LKP7CjptwV2FGjzUVleqbzWuyHDA92dNvlmLsfJ6zQ/LJZei417ExUrOMyPNKaUu
+JOXn/2dAWEOuzr99TaQSxtdIuPOwhcV8vQZ6iZ+9lhU=
+`pragma protect end_protected
+
+endmodule

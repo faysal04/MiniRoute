@@ -1,0 +1,47 @@
+module inp_reader (
+  input                 clock          ,
+  input                 reset          ,
+  input                 port_in_valid  ,
+  input        [ 8-1:0] port_in_data   ,
+  input                 port_in_busy   ,
+  output logic          port_in_success,
+  output logic [64-1:0] flit_out
+);
+
+`pragma protect begin_protected
+`pragma protect version = 1
+`pragma protect encrypt_agent = "ModelSim" , encrypt_agent_info = "2020.1"
+`pragma protect key_keyowner = "Mentor Graphics Corporation" , key_keyname = "MGC-VERIF-SIM-RSA-2"
+`pragma protect key_method = "rsa"
+`pragma protect encoding = ( enctype = "base64" , line_length = 64 , bytes = 256 )
+`pragma protect key_block
+nVNxkJA6N1Z5k3EvaJ6SPzNL6qaxvXgelnA0SewUbTu0c2/+dx5NPMVvxJksLbjL
+uRaUYExQcu+TALble94cb06XVSai7QBaPqCdgSz6M1O+N1YyBVoTsv4daaqTWEUM
+/VNH5XNIPl86CjUTUlivYUIfOosZIvzQkRxoc3D44xKU2j0b4ZIl3fkPnHNRC7hb
+ru6Se52sbvx7Wj7weWOPr3ABNhNcYeWicxScje1gLff1Rc4GFC2tCWtYkQTJqYr2
+V9qzRpm8lwe6QrrpSK6blNGLa5EMqrQeTaDnng66KVkhokyrMToJXeLQFNpMNzjT
+URMq1znCEauTZe7UIJtUiA==
+`pragma protect data_method = "aes128-cbc"
+`pragma protect encoding = ( enctype = "base64" , line_length = 64 , bytes = 832 )
+`pragma protect data_block
+h9FNbjNcosiToxEAUu6oEsLZNPEQYpi5eVrjeN5PTnXEE+khfFlw5m46r3az6oI6
+DFgnfzhsMcM14pKC2TXcGzcuJsdQGHCcWogFEf0ehk8ClAOXcGAe504c/SBtN5YD
+mIwyeCbd1pFmsp42XBXddPY09PI1VjwXJptNzg7qqJKq9aCfFYrqKhw64kBYT37s
+J4WgyI/asQA8vI6GJHe5+K+EAGKBnTyeRuY5aX3HbloLcKovvwOtNN2jqlqJuOK9
+SWdC5zfaM351pjiZRm1AuHY30z2tOzeF178HNs8FkDy+H6ssKuFSGIoka/OA+B+I
+d7/mkEgtSBnfOv0WLS7kdkjPer3TggO05UIPW60Cg5hvQOvkTDkVg4hsAmcKJPfN
+hyrCLw00tWicYbkNw3tqVeEvTkps95N1vNWASK5wOfLrm/7an+wEMIppLRqLTLHD
+3rSkfcRmyLar3zCl4S+n6natwfBfv+DPR5lbtE7xHE8jz1v98LcF7VjPvqWK5mgH
+jtC/0fkehzra2EOo3qfiyIJENs1/Y8E54jVIvc6/UkYBYgFInOP1NHkXPh9fwZal
+rYQ4gGxaznYGdpoXzD1UWJHsNWm8h6ljcolpv34TW4wmfmzci64FnjXureRCI3Zy
+nGUoDY5yknnjOlFF5gFNZnLDUHTbMQe6WyQHyjx8pEbMhl16ATRQ6G2p2tXue8xZ
+dRzzPiwSH5cMAKgYifhdTgDv8aTOpK1eJGJveMq8XmOmGvmV8qzU2YMddr2EqHkx
+6sVVQtRQ99wucmKxolgEH19TObr4Li21cr/ZlAA5IM+porhpMCPVkIQ50VvscTtE
+L80r3TlYrQ1fp7Kr7g3EpXtXikNLUmhvGdKmpyDGqY66mrkwAGeIdJM9qxlJelGW
+A/okv0nIn0Gv+j29vtE5OACgocgTTu20ZCeYpxZcKgQ36K0NFvHllgiKA1+5VkIR
++tB8EB/yEouLJpn9vC7Q5y/J2zoJy0cIKBGLMBnYwNriQHFRrfVOmpRYoBg2HJpJ
+kltsm4tea6itmaNgzPXh/yVTfNjAINJoUNvySODqsvabhZCZBb/5FweLa/mnqsl7
+KCktvRNhOlVJFmiS3HDi5g==
+`pragma protect end_protected
+
+endmodule
