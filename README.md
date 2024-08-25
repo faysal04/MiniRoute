@@ -24,3 +24,29 @@ This release implements basic data path. It makes the following assumptions.
 8- If multiple ports sends a packet target to the same destination, the packet is routed in accordance with ports priority, the priority order from highest to lowest is port_0, port_1, port_2, port_3 
 
 
+Release Notes - MVP
+
+Default Addresses:
+  Default addresses have been configured as follows:
+
+    port_0 = 0xFA
+    port_1 = 0xFB
+    port_2 = 0xFC
+    port_3 = 0xFD
+
+Control Registers:
+    Control registers now default to a value of 0xFF.
+
+Packet Validation:
+    Packet validation now occurs before any further processing. This includes verifying the source address, destination address, and checksum. If any of these checks fail, an error will be returned, and normal operations will only proceed if the packet passes all validation steps.
+
+Broadcast and Device Connected Registers:
+    The "Broadcast Enabled" and "Device Connected" registers apply only to the output port. The DUT will always read input packets, regardless of the status of these registers.
+
+Invalid Packet Handling:
+    Packets with invalid packet types will be ignored.
+
+Operation After Reset:
+    MiniRoute can operate normally after a reset using default values, with configuration possible at any time.
+
+Note: This is the MVP release. A patch release will be added later this week.
